@@ -107,3 +107,5 @@ void list::traverse() /*mengunjungi dan membaca data dalam list*/
 		cout << endl;
 	}
 }
+
+int main()
