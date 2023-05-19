@@ -91,3 +91,5 @@ bool list::search(int nim, node** previous, node** current) {
 	}
 	return (*current != NULL);
 }
+
+void list::traverse() /*mengunjungi dan membaca data dalam list*/
