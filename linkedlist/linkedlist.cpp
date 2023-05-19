@@ -24,7 +24,7 @@ public:
 list::list() {
 	START = NULL;
 }
-void list::addnode()/*menambahkan sebuah node kedalam list*/
+void list::addnode() /*menambahkan sebuah node kedalam list*/
 {
 	int nim;
 	char nm[20];
@@ -53,4 +53,16 @@ void list::addnode()/*menambahkan sebuah node kedalam list*/
 	current = START;
 	previous = START;
 
-	
+	while ((current != NULL) && (nim >= current->noMhs))
+	{
+		if (nim == current->noMhs) {
+			cout << "\nDuplikasi noMhs tidak diijinkan\n";
+			return;
+		}
+		previous = current;
+		current = current->next;
+	}
+	/*jika lood di atas dieksekusi, previous dan current akan menempati posisi dimana*/
+	nodeBaru->next = current;
+	previous->next = nodeBaru;
+}
