@@ -66,3 +66,5 @@ void list::addnode() /*menambahkan sebuah node kedalam list*/
 	nodeBaru->next = current;
 	previous->next = nodeBaru;
 }
+
+bool list::delnode(int nim) /*menghapus node dari dalam list*/
