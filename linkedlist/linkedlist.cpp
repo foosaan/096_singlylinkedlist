@@ -68,3 +68,14 @@ void list::addnode() /*menambahkan sebuah node kedalam list*/
 }
 
 bool list::delnode(int nim) /*menghapus node dari dalam list*/
+{
+	node* current, * previous;
+	if (search(nim, &previous, &current) == false)
+		return false;
+	previous->next = current->next;
+	if (current == START)
+		START = START->next;
+
+	delete current;
+	return true;
+}
